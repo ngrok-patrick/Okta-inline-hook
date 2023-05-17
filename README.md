@@ -21,11 +21,6 @@ func main() {
 		fmt.Println("The status code we got is:", 200)
 		fmt.Fprintf(w, myResponse)
 	})
-
-	http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hi")
-	})
-
 	log.Fatal(http.ListenAndServe(":80", nil))
 
 }
